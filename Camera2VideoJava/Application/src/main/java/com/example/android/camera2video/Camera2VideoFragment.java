@@ -25,6 +25,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
@@ -586,7 +587,7 @@ public class Camera2VideoFragment extends Fragment
     private String getVideoFilePath(Context context) {
         final File dir = context.getExternalFilesDir(null);
         Log.d(TAG,"getVideoFilePath count: "+CameraActivity.getCount());
-        return (dir == null ? "" : ( "/sdcard/CaptureApp/"+ "Video_")) + CameraActivity.getCount() + "_" + System.currentTimeMillis() + "_" + ".mp4";
+        return (dir == null ? "" : ( "/sdcard/CaptureApp/"+ "Video_")) + CameraActivity.getCount() + "_" + System.currentTimeMillis()+ ".mp4";
     }
 
     private void startRecordingVideo() {
@@ -813,8 +814,10 @@ public class Camera2VideoFragment extends Fragment
                     appinfo.label = ri.loadLabel(packageManager);
                     appinfo.name = ri.activityInfo.packageName;
                     appinfo.icon = ri.activityInfo.loadIcon(packageManager);
+                    SharedPreferences sf = CameraActivity.getSF();
+                    appinfo.count = sf.getInt(appinfo.label.toString(),0);
                     apps.add(appinfo);
-                    //Log.d("MOBED"," | loadApps: "+appinfo.label+ " | Package name: "+appinfo.name);
+                    Log.d("MOBED"," | loadApps: "+appinfo.label+ " | count: "+appinfo.count);
                 }
             }
 
@@ -887,8 +890,14 @@ public class Camera2VideoFragment extends Fragment
                     Log.d("MOBED", "Screen X: " +positionX);
                     Log.d("MOBED", "Screen Y: " +positionY);
                     position = i;
-
-
+                    SharedPreferences sf = CameraActivity.getSF();
+                    String applabel = apps.get(position).label.toString();
+                    int count = sf.getInt(applabel,0);
+                    SharedPreferences.Editor editor = sf.edit();
+                    count+=1;
+                    editor.putInt(applabel,count);
+                    editor.commit();
+                    Log.d(TAG,applabel+" count: "+count);
                     stopRecordingVideo();
 
                     Handler delayHandler = new Handler();

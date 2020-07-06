@@ -1,8 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Android Apps\\github\\GazeDataVideoCollectingLauncher\\Camera2VideoJava\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Android Apps\\camera-samples\\Camera2VideoJava\\Application\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
+                {
+                    "source": "C:\\Android Apps\\camera-samples\\Camera2VideoJava\\Application\\src\\main\\res\\values\\template-styles.xml",
+                    "from": {
+                        "startLines": "24,20,22,27,29,34",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "792,671,735,876,907,1109",
+                        "endLines": "24,20,22,27,32,39",
+                        "endColumns": "51,60,53,27,12,12",
+                        "endOffsets": "839,727,784,899,1101,1387"
+                    },
+                    "to": {
+                        "startLines": "291,1668,1669,1677,1774,1778",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "18887,110613,110673,111398,119134,119330",
+                        "endLines": "291,1668,1669,1677,1777,1783",
+                        "endColumns": "50,59,52,26,12,12",
+                        "endOffsets": "18933,110668,110721,111420,119325,119603"
+                    }
+                },
                 {
                     "source": "C:\\Users\\joonb\\.gradle\\caches\\transforms-1\\files-1.1\\coordinatorlayout-28.0.0.aar\\d2189454722bfd19e47ba6854c59d6fb\\res\\values\\values.xml",
                     "from": {
@@ -23,7 +42,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Android Apps\\github\\GazeDataVideoCollectingLauncher\\Camera2VideoJava\\Application\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Android Apps\\camera-samples\\Camera2VideoJava\\Application\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "6,4,5,2,3",
                         "startColumns": "4,4,4,4,4",
@@ -37,23 +56,6 @@
                         "startOffsets": "17802,17885,18133,18241,18407",
                         "endColumns": "82,49,107,41,37",
                         "endOffsets": "17880,17930,18236,18278,18440"
-                    }
-                },
-                {
-                    "source": "C:\\Android Apps\\github\\GazeDataVideoCollectingLauncher\\Camera2VideoJava\\Application\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "17",
-                        "startColumns": "4",
-                        "startOffsets": "663",
-                        "endColumns": "95",
-                        "endOffsets": "754"
-                    },
-                    "to": {
-                        "startLines": "1367",
-                        "startColumns": "4",
-                        "startOffsets": "87597",
-                        "endColumns": "94",
-                        "endOffsets": "87687"
                     }
                 },
                 {
@@ -76,22 +78,37 @@
                     }
                 },
                 {
-                    "source": "C:\\Android Apps\\github\\GazeDataVideoCollectingLauncher\\Camera2VideoJava\\Application\\src\\main\\res\\values\\base-strings.xml",
+                    "source": "C:\\Android Apps\\camera-samples\\Camera2VideoJava\\Application\\src\\main\\res\\values\\template-dimens.xml",
                     "from": {
-                        "startLines": "18,19",
-                        "startColumns": "4,4",
-                        "startOffsets": "665,716",
-                        "endLines": "18,27",
-                        "endColumns": "49,13",
-                        "endOffsets": "710,917"
+                        "startLines": "28,24,23,22,21,20,29",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "987,904,859,813,769,726,1058",
+                        "endColumns": "69,42,43,44,42,41,67",
+                        "endOffsets": "1052,942,898,853,807,763,1121"
                     },
                     "to": {
-                        "startLines": "269,272",
-                        "startColumns": "4,4",
-                        "startOffsets": "17752,17935",
-                        "endLines": "269,280",
-                        "endColumns": "49,13",
-                        "endOffsets": "17797,18128"
+                        "startLines": "172,173,174,175,176,177,205",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "11780,11850,11893,11937,11982,12025,13710",
+                        "endColumns": "69,42,43,44,42,41,67",
+                        "endOffsets": "11845,11888,11932,11977,12020,12062,13773"
+                    }
+                },
+                {
+                    "source": "C:\\Android Apps\\camera-samples\\Camera2VideoJava\\Application\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "17",
+                        "startColumns": "4",
+                        "startOffsets": "663",
+                        "endColumns": "95",
+                        "endOffsets": "754"
+                    },
+                    "to": {
+                        "startLines": "1367",
+                        "startColumns": "4",
+                        "startOffsets": "87597",
+                        "endColumns": "94",
+                        "endOffsets": "87687"
                     }
                 },
                 {
@@ -133,20 +150,22 @@
                     }
                 },
                 {
-                    "source": "C:\\Android Apps\\github\\GazeDataVideoCollectingLauncher\\Camera2VideoJava\\Application\\src\\main\\res\\values\\template-dimens.xml",
+                    "source": "C:\\Android Apps\\camera-samples\\Camera2VideoJava\\Application\\src\\main\\res\\values\\base-strings.xml",
                     "from": {
-                        "startLines": "28,24,23,22,21,20,29",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "987,904,859,813,769,726,1058",
-                        "endColumns": "69,42,43,44,42,41,67",
-                        "endOffsets": "1052,942,898,853,807,763,1121"
+                        "startLines": "18,19",
+                        "startColumns": "4,4",
+                        "startOffsets": "665,716",
+                        "endLines": "18,27",
+                        "endColumns": "49,13",
+                        "endOffsets": "710,917"
                     },
                     "to": {
-                        "startLines": "172,173,174,175,176,177,205",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "11780,11850,11893,11937,11982,12025,13710",
-                        "endColumns": "69,42,43,44,42,41,67",
-                        "endOffsets": "11845,11888,11932,11977,12020,12062,13773"
+                        "startLines": "269,272",
+                        "startColumns": "4,4",
+                        "startOffsets": "17752,17935",
+                        "endLines": "269,280",
+                        "endColumns": "49,13",
+                        "endOffsets": "17797,18128"
                     }
                 },
                 {
@@ -164,25 +183,6 @@
                         "startOffsets": "3726,13045,13098,13151,13204,107207,107383,107505,107767,107962",
                         "endColumns": "88,52,52,52,52,65,121,60,65,66",
                         "endOffsets": "3810,13093,13146,13199,13252,107268,107500,107561,107828,108024"
-                    }
-                },
-                {
-                    "source": "C:\\Android Apps\\github\\GazeDataVideoCollectingLauncher\\Camera2VideoJava\\Application\\src\\main\\res\\values\\template-styles.xml",
-                    "from": {
-                        "startLines": "24,20,22,27,29,34",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "792,671,735,876,907,1109",
-                        "endLines": "24,20,22,27,32,39",
-                        "endColumns": "51,60,53,27,12,12",
-                        "endOffsets": "839,727,784,899,1101,1387"
-                    },
-                    "to": {
-                        "startLines": "291,1668,1669,1677,1774,1778",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "18887,110613,110673,111398,119134,119330",
-                        "endLines": "291,1668,1669,1677,1777,1783",
-                        "endColumns": "50,59,52,26,12,12",
-                        "endOffsets": "18933,110668,110721,111420,119325,119603"
                     }
                 }
             ]

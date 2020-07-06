@@ -92,6 +92,10 @@ public class CameraActivity extends Activity {
         return count;
     }
 
+    public static SharedPreferences getSF(){
+        return sf;
+    }
+
     public static int addCount(){
         count+=1;
         SharedPreferences.Editor editor = sf.edit();

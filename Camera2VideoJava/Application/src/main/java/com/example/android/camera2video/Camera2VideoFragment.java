@@ -84,7 +84,7 @@ public class Camera2VideoFragment extends Fragment
     private static final int SENSOR_ORIENTATION_INVERSE_DEGREES = 270;
     private static final SparseIntArray DEFAULT_ORIENTATIONS = new SparseIntArray();
     private static final SparseIntArray INVERSE_ORIENTATIONS = new SparseIntArray();
-
+    private boolean debugFlag = true;
     private static final String TAG = "MOBED";
     private static final int REQUEST_VIDEO_PERMISSIONS = 1;
     private static final String FRAGMENT_DIALOG = "dialog";
@@ -837,27 +837,47 @@ public class Camera2VideoFragment extends Fragment
                     }
                 });
 
+                //Used for Debugging
+                if(debugFlag){
+                    for (int loopcount=0;loopcount<apps.size();loopcount++){
+                        Log.d(TAG,apps.get(loopcount).name.toString()+": "+apps.get(loopcount).count);
+                    }
+                }
+
                 //Now to force user to press 4 corners, locate 4 most pressed apps in 4 corners.
-                if(apps.size()>4) {
+                //Additionally place 6th ~ 9th most used app at the top, left, right, bottom
+                //And Center for 5th
+                if(apps.size()>9) {
                     AppInfo app0 = apps.get(0);
                     AppInfo app1 = apps.get(1);
                     AppInfo app2 = apps.get(2);
                     AppInfo app3 = apps.get(3);
+                    AppInfo app4 = apps.get(4);
+                    AppInfo app5 = apps.get(5);
+                    AppInfo app6 = apps.get(6);
+                    AppInfo app7 = apps.get(7);
+                    AppInfo app8 = apps.get(8);
 
                     //TODO Relate colsize, rowsize with Display Metric(dp)
+                    //TODO This doesn't guarantee the right position for each selected apps. So Must be revised
                     int colsize = 5;
                     int rowsize = 7;
                     SwapAppInfo(apps.get(0),app0);
                     SwapAppInfo(apps.get(colsize-1),app1);
                     SwapAppInfo(apps.get((rowsize-1)*colsize),app2);
                     SwapAppInfo(apps.get(rowsize*colsize-1),app3);
-
+                    SwapAppInfo(apps.get(colsize*(rowsize/2)+colsize/2),app4);
+                    SwapAppInfo(apps.get(colsize/2),app5);
+                    SwapAppInfo(apps.get(colsize*(rowsize/2)),app6);
+                    SwapAppInfo(apps.get(colsize*(1+rowsize/2)-1),app8);
                 }
 
                 //Used for Debugging
-//                for (int loopcount=0;loopcount<apps.size();loopcount++){
-//                    Log.d(TAG,apps.get(loopcount).name.toString()+": "+apps.get(loopcount).count);
-//                }
+                if(debugFlag){
+                    for (int loopcount=0;loopcount<apps.size();loopcount++){
+                        Log.d(TAG,apps.get(loopcount).name.toString()+": "+apps.get(loopcount).count);
+                    }
+                }
             }
 
         } catch (Exception ex) {

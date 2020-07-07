@@ -1,11 +1,11 @@
 #Internal package file, do not edit.
-#Mon Jul 06 16:30:04 KST 2020
-1.base=C\:\\Android Apps\\camera-samples\\Camera2VideoJava\\Application\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+#Tue Jul 07 10:52:23 KST 2020
+1.base=C\:\\Users\\Mobed\\Desktop\\JB\\GazeDataVideoCollectingLauncher\\Camera2VideoJava\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 0.baseType=DIRECTORY
 1.baseType=DIRECTORY
 count=2
 1.set=DEX
 0.path=classes.dex
 0.set=DEX
-0.base=C\:\\Android Apps\\camera-samples\\Camera2VideoJava\\Application\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+0.base=C\:\\Users\\Mobed\\Desktop\\JB\\GazeDataVideoCollectingLauncher\\Camera2VideoJava\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 1.path=classes.dex

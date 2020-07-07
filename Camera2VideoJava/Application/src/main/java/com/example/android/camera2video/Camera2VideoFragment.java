@@ -817,7 +817,20 @@ public class Camera2VideoFragment extends Fragment
                     SharedPreferences sf = CameraActivity.getSF();
                     appinfo.count = sf.getInt(appinfo.label.toString(),0);
                     apps.add(appinfo);
-                    Log.d("MOBED"," | loadApps: "+appinfo.label+ " | count: "+appinfo.count);
+                    //Log.d(TAG," | loadApps: "+appinfo.label+ " | count: "+appinfo.count);
+                }
+
+                apps.sort(new Comparator<AppInfo>() {
+                    @Override
+                    public int compare(AppInfo arg0, AppInfo arg1) {
+                        // TODO Auto-generated method stub
+                        int count0 = arg0.count;
+                        int count1 = arg1.count;
+                        return Integer.compare(count1, count0);
+                    }
+                });
+                for (int loopcount=0;loopcount<apps.size();loopcount++){
+                    Log.d(TAG,apps.get(loopcount).name.toString()+": "+apps.get(loopcount).count);
                 }
             }
 

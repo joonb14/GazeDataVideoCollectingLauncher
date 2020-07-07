@@ -1,7 +1,7 @@
-#Mon Jul 06 18:34:24 KST 2020
-base.0=C\:\\Android Apps\\camera-samples\\Camera2VideoJava\\Application\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out
+#Tue Jul 07 17:20:40 KST 2020
+base.0=C\:\\Users\\Mobed\\Desktop\\JB\\GazeDataVideoCollectingLauncher\\Camera2VideoJava\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Android Apps\\camera-samples\\Camera2VideoJava\\Application\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out
+base.1=C\:\\Users\\Mobed\\Desktop\\JB\\GazeDataVideoCollectingLauncher\\Camera2VideoJava\\Application\\build\\intermediates\\transforms\\dexMerger\\debug\\0

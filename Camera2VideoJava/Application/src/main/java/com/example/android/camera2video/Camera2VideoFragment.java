@@ -285,14 +285,20 @@ public class Camera2VideoFragment extends Fragment
     public void onPause() {
         closeCamera();
         stopBackgroundThread();
-        if(!endFlag){
-            //Erase temporarily stored file
-            File tempFile = new File(mNextVideoAbsolutePath);
-            if (tempFile.exists()){
-                //erase the file
-                tempFile.delete();
-                Log.e(TAG, "Paused before stop recording. Erase temporarily stored file");
+        try {
+            if (!endFlag) {
+                //Erase temporarily stored file
+                File tempFile = new File(mNextVideoAbsolutePath);
+                if (tempFile.exists()) {
+                    //erase the file
+                    tempFile.delete();
+                    Log.e(TAG, "Paused before stop recording. Erase temporarily stored file");
+                }
             }
+        }
+        catch (RuntimeException e) {
+            Log.e(TAG, "Null Pointer Exception on mNextVideoAbsolutePath");
+            e.printStackTrace();
         }
         super.onPause();
         Log.d(TAG, "onPause");
@@ -820,6 +826,7 @@ public class Camera2VideoFragment extends Fragment
                     //Log.d(TAG," | loadApps: "+appinfo.label+ " | count: "+appinfo.count);
                 }
 
+                //Sort apps by pressed count
                 apps.sort(new Comparator<AppInfo>() {
                     @Override
                     public int compare(AppInfo arg0, AppInfo arg1) {
@@ -829,16 +836,51 @@ public class Camera2VideoFragment extends Fragment
                         return Integer.compare(count1, count0);
                     }
                 });
-                for (int loopcount=0;loopcount<apps.size();loopcount++){
-                    Log.d(TAG,apps.get(loopcount).name.toString()+": "+apps.get(loopcount).count);
+
+                //Now to force user to press 4 corners, locate 4 most pressed apps in 4 corners.
+                if(apps.size()>4) {
+                    AppInfo app0 = apps.get(0);
+                    AppInfo app1 = apps.get(1);
+                    AppInfo app2 = apps.get(2);
+                    AppInfo app3 = apps.get(3);
+
+                    //TODO Relate colsize, rowsize with Display Metric(dp)
+                    int colsize = 5;
+                    int rowsize = 7;
+                    SwapAppInfo(apps.get(0),app0);
+                    SwapAppInfo(apps.get(colsize-1),app1);
+                    SwapAppInfo(apps.get((rowsize-1)*colsize),app2);
+                    SwapAppInfo(apps.get(rowsize*colsize-1),app3);
+
                 }
+
+                //Used for Debugging
+//                for (int loopcount=0;loopcount<apps.size();loopcount++){
+//                    Log.d(TAG,apps.get(loopcount).name.toString()+": "+apps.get(loopcount).count);
+//                }
             }
 
         } catch (Exception ex) {
             Log.e("Error loadApps", ex.getMessage().toString() + " loadApps");
         }
     }
+    private void SwapAppInfo(AppInfo app1, AppInfo app2){
+        AppInfo temp = new AppInfo();
+        temp.count = app1.count;
+        temp.name = app1.name;
+        temp.icon = app1.icon;
+        temp.label = app1.label;
 
+        app1.count = app2.count;
+        app1.name = app2.name;
+        app1.icon = app2.icon;
+        app1.label = app2.label;
+
+        app2.count = temp.count;
+        app2.label = temp.label;
+        app2.name = temp.name;
+        app2.icon = temp.icon;
+    }
 
     private void loadListView() {
 

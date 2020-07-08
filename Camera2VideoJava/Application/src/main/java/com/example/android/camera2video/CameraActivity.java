@@ -27,6 +27,7 @@ import android.os.Bundle;
 import android.os.Environment;
 
 import java.io.File;
+import java.io.IOException;
 
 public class CameraActivity extends Activity {
 
@@ -62,6 +63,20 @@ public class CameraActivity extends Activity {
         if (!dir_exists(dir_path)){
             File directory = new File(dir_path);
             directory.mkdirs();
+        }
+
+        File file = new File("sdcard/CaptureApp/.nomedia");
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        file = new File("sdcard/LogFile/.nomedia");
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         setContentView(R.layout.activity_camera);

@@ -300,8 +300,8 @@ public class Camera2VideoFragment extends Fragment
             Log.e(TAG, "Null Pointer Exception on mNextVideoAbsolutePath");
             e.printStackTrace();
         }
-        super.onPause();
         Log.d(TAG, "onPause");
+        super.onPause();
     }
 
     @Override

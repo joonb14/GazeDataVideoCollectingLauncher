@@ -36,5 +36,20 @@
       <option name="name" value="C:\Users\Mobed\AppData\Local\Android\Sdk\extras\android\m2repository" />
       <option name="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/extras/android/m2repository" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="C:\NVPACK\android-sdk-windows\extras\google\m2repository" />
+      <option name="name" value="C:\NVPACK\android-sdk-windows\extras\google\m2repository" />
+      <option name="url" value="file:/C:/NVPACK/android-sdk-windows/extras/google/m2repository" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="C:\NVPACK\android-sdk-windows\extras\android\m2repository" />
+      <option name="name" value="C:\NVPACK\android-sdk-windows\extras\android\m2repository" />
+      <option name="url" value="file:/C:/NVPACK/android-sdk-windows/extras/android/m2repository/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="C:\NVPACK\android-sdk-windows\extras\m2repository" />
+      <option name="name" value="C:\NVPACK\android-sdk-windows\extras\m2repository" />
+      <option name="url" value="file:/C:/NVPACK/android-sdk-windows/extras/m2repository" />
+    </remote-repository>
   </component>
 </project>
